@@ -34,7 +34,7 @@ wp language core install ${APP_LOCALE} --activate
 
 wp rewrite structure '%postname%' --hard
 
-wp package install aaemnnosttv/wp-cli-dotenv-command:^2.0
+wp package install aaemnnosttv/wp-cli-dotenv-command > /dev/null 2>&1
 wp dotenv salts regenerate
 
 ln -fs ${THEME_PATH}/sage ${CORE_PATH}/web/app/themes
