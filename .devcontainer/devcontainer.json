@@ -1,0 +1,21 @@
+{
+    "name": "Sage WordPress Theme Development",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "sage.test",
+    "remoteUser": "vscode",
+    "workspaceFolder": "/app/theme/sage",
+    "onCreateCommand": "sudo chmod +x ../docker/scripts/install.sh && ../docker/scripts/install.sh",
+    "postCreateCommand": "sudo chmod +x ../docker/scripts/redis-cache.sh && ../docker/scripts/redis-cache.sh",
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    }
+}
