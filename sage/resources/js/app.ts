@@ -3,4 +3,4 @@ if (import.meta.hot) {
 }
 
 import 'virtual:uno.css'
-import '../css/app.css'
+import '@css/app.css'

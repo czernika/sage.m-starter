@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite'
 import UnoCSS from 'unocss/vite'
 import laravel from 'laravel-vite-plugin'
+import { resolve } from 'path'
 
 export default defineConfig({
     resolve: {
         alias: {
-            '@css': 'resources/css',
-            '@js': 'resources/js',
+            '@css': resolve(__dirname, 'resources/css'),
+            '@js': resolve(__dirname, 'resources/js'),
         },
     },
     plugins: [
