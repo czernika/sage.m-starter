@@ -54,34 +54,17 @@ After installation process this is the app structure
     │   ├── web/
     │   │   └── app/
     │   │       └── themes/
-    │   │           └── sage -> /app/theme/sage
+    │   │           └── sage
     │   └── wp
-    └── theme/
+    └── build/
+        └── .devcontainer
+        └── docker
         └── sage
 ```
 
-Sage theme is actually symlink to development theme. By default devcontainer opens `/app/theme/sage` folder. You are free to change it
-
 ## Known issues
 
-- Styles and scripts are not loaded by web browser (404 error) when were build with `pnpm build` script - problem comes with symlinks and `X-Content-Type-Options: nosniff` header working together (probably)
 - When using [Roots/soil](https://github.com/roots/soil) plugin it erases all injected by Vite links with `cleanup` setting enabled
-
-### Workaround for previewing theme
-
-If you need to see theme preview you may create copy of development one and switch to it
-
-1. Copy theme into some kind of "preview-theme"
-
-```sh
-cp -R /app/theme/sage /app/www/web/app/theme/preview-sage
-```
-
-2. Switch to a new theme
-
-```sh
-wp theme activate preview-sage
-```
 
 ## License
 

@@ -10,10 +10,12 @@ services:
       XDEBUG_CONFIG: '${XDEBUG_CONFIG:-client_port=9003 client_host=host.docker.internal discover_client_host=true}'
     volumes:
       - app:/app/www
-      - .:/app/theme
+      - .:/app/build
       - ./docker/php.ini:/usr/local/etc/php/conf.d/php.ini
     depends_on:
       - mysql
+      - mailpit
+      - redis
     networks:
       - sage
 
@@ -55,7 +57,7 @@ services:
     networks:
       - sage
 
-  cache:
+  redis:
     image: redis:alpine
     ports:
       - '${FORWARD_REDIS_PORT:-6379}:6379'

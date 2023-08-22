@@ -23,19 +23,6 @@ add_action('wp_head', function () {
  * @return void
  */
 add_action('after_setup_theme', function () {
-    /**
-     * Enable features from the Soil plugin if activated.
-     *
-     * ! NOTE: `clean-up` option removes generated asset links for Vite
-     *
-     * @link https://roots.io/plugins/soil/
-     */
-    add_theme_support('soil', [
-        // 'clean-up',
-        'nav-walker',
-        'nice-search',
-        'relative-urls',
-    ]);
 
     /**
      * Disable full-site editing support.
@@ -103,30 +90,6 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('customize-selective-refresh-widgets');
 }, 20);
-
-/**
- * Register the theme sidebars.
- *
- * @return void
- */
-add_action('widgets_init', function () {
-    $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>',
-    ];
-
-    register_sidebar([
-        'name' => __('Primary', 'sage'),
-        'id' => 'sidebar-primary',
-    ] + $config);
-
-    register_sidebar([
-        'name' => __('Footer', 'sage'),
-        'id' => 'sidebar-footer',
-    ] + $config);
-});
 
 /**
  * Configure SMTP mailpit

@@ -5,8 +5,10 @@ set -x
 sudo chown -R vscode:www-data /app
 
 CORE_PATH=/app/www
-THEME_PATH=/app/theme
+BUILD_PATH=/app/build
+INITIAL_THEME_PATH=/app/build/sage
 WP_CORE_PATH="${CORE_PATH}/web/wp"
+THEME_PATH=${CORE_PATH}/web/app/themes/sage
 
 yellow='\033[1;33m'
 reset='\033[0m'
@@ -19,12 +21,12 @@ fi
 echo -e "${yellow}Installing WordPress...${reset}"
 
 # Source env variables
-. ${THEME_PATH}/.env
+. ${BUILD_PATH}/.env
 
 # Install WordPress core
 composer -d ${CORE_PATH} create-project roots/bedrock . --prefer-dist
 
-cp ${THEME_PATH}/.env ${CORE_PATH}
+cp ${BUILD_PATH}/.env ${CORE_PATH}
 
 cd ${CORE_PATH}
 
@@ -37,12 +39,12 @@ wp rewrite structure '%postname%' --hard
 wp package install aaemnnosttv/wp-cli-dotenv-command > /dev/null 2>&1
 wp dotenv salts regenerate
 
-ln -fs ${THEME_PATH}/sage ${CORE_PATH}/web/app/themes
+cp -R ${INITIAL_THEME_PATH} ${THEME_PATH}
 
 wp theme activate sage
 
 # Install theme dependencies
-cd ${THEME_PATH}/sage
+cd ${THEME_PATH}
 
 if [ ! -f '.env' ]; then
     sed -i "s/APP_URL='127.0.0.1'/APP_URL='${WP_HOME}'/" .env.example

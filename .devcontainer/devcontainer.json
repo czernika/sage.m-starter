@@ -3,13 +3,16 @@
     "dockerComposeFile": "../docker-compose.yml",
     "service": "sage.test",
     "remoteUser": "vscode",
-    "workspaceFolder": "/app",
-    "onCreateCommand": "sudo chmod +x ./theme/docker/scripts/install.sh && ./theme/docker/scripts/install.sh",
-    "postCreateCommand": "sudo chmod +x ./theme/docker/scripts/redis-cache.sh && ./theme/docker/scripts/redis-cache.sh",
+    "workspaceFolder": "/app/www/web/app/themes/sage",
+    "onCreateCommand": "sudo chmod +x ${scriptPath}/install.sh && ${scriptPath}/install.sh",
+    "postCreateCommand": "sudo chmod +x ${scriptPath}/redis-cache.sh && ${scriptPath}/redis-cache.sh",
     "features": {
         "ghcr.io/devcontainers/features/git:1": {
             "version": "latest"
         }
+    },
+    "containerEnv": {
+        "scriptPath": "/app/build/docker/scripts"
     },
     "customizations": {
         "vscode": {
