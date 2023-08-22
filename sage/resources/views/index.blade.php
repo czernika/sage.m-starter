@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="p-4 h-screen max-[76px]:[.admin-bar_&]:h-[calc(100vh-var(--wp-admin--admin-bar--height))] [.admin-bar_&]:h-[calc(100vh-var(--wp-admin--admin-bar--height))] w-screen bg-slate-50 @dark:bg-slate-800 flex justify-center items-center">
+    <div class="p-4 h-screen [.admin-bar_&]:h-[calc(100vh-var(--wp-admin--admin-bar--height))] w-screen bg-slate-50 @dark:bg-slate-800 flex justify-center items-center">
         <div class="text-center">
             <h1 class="font-semibold text-3xl text-slate-800 @dark:text-slate-200">
-                Welcome to <span class="text-blue-500">Sage.M</span> theme
+                Welcome to <span class="text-violet-700 @dark:text-blue-700">Sage<span class="ml-0.5 inline-block rounded bg-gradient-to-tr from-violet-700 to-blue-700 text-white px-1">M</span c></span> theme
             </h1>
 
             <p class="text-slate-600 @dark:text-slate-200 mt-2.5">
