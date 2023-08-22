@@ -18,7 +18,46 @@
         "vscode": {
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "bash"
-            }
+            },
+            "extensions": [
+                "anteprimorac.html-end-tag-labels",
+                "antfu.unocss",
+                "austenc.laravel-blade-spacer",
+                "blanc-frederic.vs-phpcompanion",
+                "bmewburn.vscode-intelephense-client",
+                "bradgashler.htmltagwrap",
+                "ChakrounAnas.turbo-console-log",
+                "christian-kohler.npm-intellisense",
+                "christian-kohler.path-intellisense",
+                "dbaeumer.vscode-eslint",
+                "donjayamanne.githistory",
+                "eamodio.gitlens",
+                "EditorConfig.EditorConfig",
+                "ellreka.tailwindcss-highlight",
+                "formulahendry.auto-close-tag",
+                "formulahendry.auto-complete-tag",
+                "formulahendry.auto-rename-tag",
+                "ghmcadams.lintlens",
+                "heybourn.headwind",
+                "ionutvmi.path-autocomplete",
+                "IronGeek.vscode-env",
+                "johnbillion.vscode-wordpress-hooks",
+                "Larrito.status-bar-permission-bits",
+                "marabesi.php-import-checker",
+                "me-dutour-mathieu.vscode-github-actions",
+                "naumovs.color-highlight",
+                "neilbrayfield.php-docblocker",
+                "onecentlin.laravel-blade",
+                "rangav.vscode-thunder-client",
+                "redhat.vscode-yaml",
+                "shevaua.phpcs",
+                "steoates.autoimport",
+                "streetsidesoftware.code-spell-checker",
+                "streetsidesoftware.code-spell-checker-russian",
+                "stylelint.vscode-stylelint",
+                "yzhang.markdown-all-in-one",
+                "zh9528.file-size"
+            ]
         }
     }
 }
