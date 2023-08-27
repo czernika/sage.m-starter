@@ -15,7 +15,8 @@ RUN apt-get update && apt-get -y install --no-install-recommends \
         nano \
         zip \
         unzip \
-        cron
+        cron \
+        git
 
 # Install PHP extensions
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
