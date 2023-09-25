@@ -27,6 +27,6 @@
         "postcss-sort-media-queries": "^5.2.0",
         "stylelint": "^15.10.3",
         "stylelint-config-recommended": "^13.0.0",
-        "unocss": "^0.55.2"
+        "unocss": "^0.56.2"
     }
 }
