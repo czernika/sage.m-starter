@@ -18,7 +18,7 @@
         "@types/node": "^20.5.1",
         "@typescript-eslint/eslint-plugin": "^6.4.1",
         "@typescript-eslint/parser": "^6.4.1",
-        "@unocss/transformer-directives": "^0.57.0",
+        "@unocss/transformer-directives": "^0.58.3",
         "autoprefixer": "^10.4.15",
         "eslint": "^8.47.0",
         "postcss-import": "^15.1.0",
