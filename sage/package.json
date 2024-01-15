@@ -21,7 +21,7 @@
         "@unocss/transformer-directives": "^0.58.3",
         "autoprefixer": "^10.4.15",
         "eslint": "^8.47.0",
-        "postcss-import": "^15.1.0",
+        "postcss-import": "^16.0.0",
         "postcss-nested": "^6.0.1",
         "postcss-pxtorem": "^6.0.0",
         "postcss-sort-media-queries": "^5.2.0",
