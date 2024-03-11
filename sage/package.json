@@ -26,7 +26,7 @@
         "postcss-pxtorem": "^6.0.0",
         "postcss-sort-media-queries": "^5.2.0",
         "stylelint": "^15.10.3",
-        "stylelint-config-recommended": "^13.0.0",
+        "stylelint-config-recommended": "^14.0.0",
         "unocss": "^0.58.3"
     }
 }
